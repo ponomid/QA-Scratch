@@ -20,8 +20,8 @@ class LoginPage extends Page {
         await this.btnSignin.click();
     }
 
-    async open() {
-        return await browser.url('https://www.bio-rad.com')
+    open() {
+        return browser.url('https://www.bio-rad.com')
     }
 }
 
