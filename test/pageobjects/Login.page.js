@@ -1,7 +1,7 @@
-const Page = require('./Page');
-class LoginPage extends Page {
+class LoginPage {
+    url = 'https://commerce.bio-rad.com/en-us/login-registration';
 
-    get inputEmail() {
+    get inputUsername() {
         return $('#okta-signin-username');
     }
 
@@ -13,15 +13,15 @@ class LoginPage extends Page {
         return $('#okta-signin-submit');
     }
 
-    async login (email, password) {
+    async login (username, password) {
         await this.open();
-        await this.inputEmail.setValue(email);
+        await this.inputUsername.setValue(username);
         await this.inputPassword.setValue(password);
         await this.btnSignin.click();
     }
 
     open() {
-        return browser.url('https://www.bio-rad.com')
+        return browser.url(this.url);
     }
 }
 

@@ -1,0 +1,8 @@
+class AccountPage{
+    get greetingsMssg() {
+        return $("//li[@class='coh-list-item loginlink_holder']");
+    }
+
+}
+
+module.exports = new AccountPage();

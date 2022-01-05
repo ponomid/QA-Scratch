@@ -6,8 +6,8 @@ class MainPage extends Page {
         return $("//a[@title='Login/register']");
     }
 
-    async open() {
-        return await browser.url('https://commerce.bio-rad.com/en-us/login-registration')
+    open() {
+        return super.open('./');
     }
 }
 
